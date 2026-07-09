@@ -2,6 +2,40 @@ import { gsap } from "../../../lib/gsap.js"
 
 const steamDuration = 4;
 
+const originalClouds = document.querySelector("#clouds");
+
+if (originalClouds) {
+  const parentNode = originalClouds.parentNode;
+  
+  const cloudsClone1 = originalClouds.cloneNode(true);
+  const cloudsClone2 = originalClouds.cloneNode(true);
+  
+  cloudsClone1.id = "clouds-clone-1";
+  cloudsClone2.id = "clouds-clone-2";
+  
+  parentNode.appendChild(cloudsClone1);
+  parentNode.appendChild(cloudsClone2);
+
+  const loopWidth = 1600; 
+
+  gsap.set(originalClouds, { x: 0 });
+  gsap.set(cloudsClone1, { x: -loopWidth });
+  gsap.set(cloudsClone2, { x: -loopWidth * 2 });
+
+  gsap.to([originalClouds, cloudsClone1, cloudsClone2], {
+    x: `+=${loopWidth * 2}`, 
+    duration: 50,
+    ease: "none",
+    repeat: -1,
+    modifiers: {
+      x: gsap.utils.unitize(x => {
+        const floatX = parseFloat(x);
+        return ((floatX + loopWidth) % (loopWidth * 3)) - loopWidth;
+      })
+    }
+  });
+}
+
 gsap.to("#outside-lights-bulbs-even", {
   opacity: 0.6,
   duration: "random(0.3, 0.7)",
@@ -17,7 +51,6 @@ gsap.to("#outside-lights-bulbs-odd", {
   yoyo: true,
   ease: "rough({ strength: 1.2, points: 8, template: 'none', taper: 'none', randomize: true })",
 });
-
 
 const ambientTimeline = gsap.timeline({
   repeat: -1,
