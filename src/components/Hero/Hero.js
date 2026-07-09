@@ -1,13 +1,5 @@
 import { gsap, ScrollTrigger, SplitText } from "../../lib/gsap.js";
 
-
-
-const split = SplitText.create("#title", { type: "chars" });
-
-gsap.set(split.chars, { yPercent: 100, opacity: 0 });
-
-
-
 gsap.timeline({
 
   scrollTrigger: {
@@ -50,32 +42,4 @@ gsap.timeline({
 
   }, 0)
 
-  .to(".hero-copy", {
-
-    opacity: 1,
-
-    pointerEvents: "auto",
-
-    ease: "power1.in",
-
-  }, 0.15)
-
-  .to(split.chars, {
-
-    yPercent: 0,
-
-    opacity: 1,
-
-    stagger: 0.02,
-
-    ease: "back.out(1.7)",
-
-  }, 0.2)
-
-  .from("#subtitle", {
-
-    opacity: 0,
-
-    y: 20,
-
-  }, 0.5);
+  
