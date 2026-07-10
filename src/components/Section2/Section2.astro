@@ -1,16 +1,25 @@
 ---
-import './Section2.css';
+import "./Section2.css";
+import BaristaScene from "../animated-scenes/BaristaScene/BaristaScene.astro";
+import WakingUpScene from "../animated-scenes/WakingUpScene/WakingUpScene.astro";
 ---
 
 <section class="panel-two">
-    <div class="panel-frame">
+    <div class="panel-frame" id="panel-1">
         <div class="panel-content">
-            <p>Rough morning?</p>
+            <div class="speech-bubble"><p>Rough morning?</p></div>
+            <WakingUpScene />
         </div>
     </div>
-	<div class="panel-frame">
+    <div class="panel-frame" id="panel-2">
         <div class="panel-content">
-            <p>I have just the thing for you!</p>
+            <div class="speech-bubble"><p>I have just the thing for you!</p></div>
+            <BaristaScene />
         </div>
     </div>
 </section>
+
+
+<script>
+	import './Section2.js';
+</script>
