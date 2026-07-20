@@ -1,23 +1,30 @@
+/* ---- panel shell ---- */
 .panel-three {
   min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: flex-start;
   background-color: #f4ede1;
-  padding-left:12vw;
+  padding-left: 12vw;
 }
+
 .panel-three .panel-frame {
-  width: 100%; 
+  width: 100%;
   height: 60vh;
-  max-width:65vw;
-  margin:25px;
+  max-width: 65vw;
+  margin: 25px;
   border: 10px solid #111;
   border-radius: 24px;
   box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.2);
   background-color: #fff;
   overflow: hidden;
 }
+
+/* panel-content is the shared coordinate space for both the base
+   scene and the portafilter overlay, so it needs position:relative
+   and the 3D perspective lives here, once */
 .panel-three .panel-content {
+  position: relative;
   width: 100%;
   height: 100%;
   display: flex;
@@ -26,4 +33,28 @@
   color: #1e1e1d;
   font-size: 1.5rem;
   font-weight: bold;
+  perspective: 1600px;
+  perspective-origin: 50% 42%;
+}
+
+/* ---- portafilter overlay ---- */
+.portafilter-layer {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.portafilter-overlay-svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+  overflow: visible;
+}
+
+#coffee-grounds-top-view,
+#Portafilter {
+  transform-box: fill-box;
+  transform-origin: 50% 50%;
+  transform-style: preserve-3d;
+  will-change: transform, opacity;
 }

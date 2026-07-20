@@ -13,13 +13,12 @@ gsap.timeline({
     anticipatePin: 1,
   },
 })
-  // panel 2 pops up — scale + opacity on the FRAME itself, not just its content
+
   .to("#panel-2", {
     opacity: 1,
     scale: 1,
     ease: "back.out(1.7)",
   }, 0.3)
-  // its speech bubble follows once the frame has mostly arrived
   .to("#panel-2 .speech-bubble", {
     opacity: 1,
     y: 0,
