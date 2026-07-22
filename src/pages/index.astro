@@ -17,7 +17,7 @@ import ScrollPin from '../components/ScrollPin/ScrollPin.astro';
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro + GSAP</title>
+		<title>Zach's Coffee!</title>
 	</head>
 	<body>
 		<Hero />
@@ -27,3 +27,11 @@ import ScrollPin from '../components/ScrollPin/ScrollPin.astro';
 		<Section5/>
 	</body>
 </html>
+
+<style is:global lang="scss">
+    @use 'webcoreui/styles' as *;
+    @include setup((
+        fontRegular: '/fonts/Inter-Regular.woff2',
+        fontBold: '/fonts/Inter-Bold.woff2'
+    ));
+</style>
