@@ -1,0 +1,19 @@
+---
+interface Props {
+  id: string;
+  cx?: number;
+  cy?: number;
+}
+
+const { id, cx = 1172, cy = 1108 } = Astro.props;
+---
+
+<ellipse
+  id={id}
+  cx={cx}
+  cy={cy}
+  rx="10"
+  ry="3"
+  fill="#3a2010"
+  style="opacity:0"
+/>
