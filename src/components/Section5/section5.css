@@ -17,11 +17,12 @@
   box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.2);
   background-color: #fff;
   overflow: hidden;
+  display:flex;
 }
 
 .panel-five .panel-content {
   position: relative;
-  width: 100%;
+  width: 50%;
   height: 100%;
   display: flex;
   align-items: center;
@@ -31,4 +32,7 @@
   font-weight: bold;
   perspective: 1600px;
   perspective-origin: 50% 42%;
+}
+.panel-five-text{
+  color:hotpink;
 }
