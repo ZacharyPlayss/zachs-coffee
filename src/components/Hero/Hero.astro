@@ -1,16 +1,17 @@
 ---
-import './Hero.css';
-import CoffeeShopScene from '../animated-scenes/CoffeeShopScene/CoffeeShopScene.astro';
+import "./Hero.css";
+import CoffeeShopScene from "../animated-scenes/CoffeeShopScene/CoffeeShopScene.astro";
+import { Card } from 'webcoreui/astro'
 ---
 
 <header class="hero">
-	<div class="hero-frame">
+	<Card element="div" className="hero-frame">
 		<div class="scene">
 			<CoffeeShopScene />
 		</div>
-	</div>
+	</Card>
 </header>
 
 <script>
-	import './Hero.js';
+	import "./Hero.js";
 </script>

@@ -2,19 +2,20 @@
 import './section4.css';
 import CoffeeDripScene from "../animated-scenes/CoffeeDripScene/CoffeeDripScene.astro";
 import MilkSteamingScene from '../animated-scenes/MilkSteamingScene/MilkSteamingScene.astro';
+import { Card } from 'webcoreui/astro'
 ---
 
 <section class="panel-four">
-    <div class="panel-frame" id="rotated-panel-frame-1">
+    <Card element="div" className="panel-frame" id="rotated-panel-frame-1">
         <div class="panel-content">
             <CoffeeDripScene/>
         </div>
-    </div>
-    <div class="panel-frame" id="rotated-panel-frame-2">
+    </Card>
+    <Card element="div" className="panel-frame" id="rotated-panel-frame-2">
         <div class="panel-content">
             <MilkSteamingScene/>
         </div>
-    </div>
+    </Card>
 </section>
 
 <script>

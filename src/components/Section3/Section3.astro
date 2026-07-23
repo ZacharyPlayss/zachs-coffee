@@ -1,16 +1,17 @@
 ---
-import './section3.css';
+import "./section3.css";
 import CoffeeDripScene from "../animated-scenes/PortafilterInstallScene/PortafilterInstallScene.astro";
-import PortafilterComponent from '../animated-scenes/PortafilterInstallScene/PortafilterComponent.astro';
+import PortafilterComponent from "../animated-scenes/PortafilterInstallScene/PortafilterComponent.astro";
+import { Card } from "webcoreui/astro";
 ---
 
 <section class="panel-three">
-    <div class="panel-frame">
+    <Card element="div" className="panel-frame">
         <div class="panel-content">
             <PortafilterComponent />
             <CoffeeDripScene />
         </div>
-    </div>
+    </Card>
 </section>
 
 <script>
