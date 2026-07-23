@@ -1,34 +1,68 @@
 import { gsap, ScrollTrigger } from "../../lib/gsap.js";
 
-
 const milkCan = document.querySelector("#milk-can");
 const noArt = document.querySelector("#coffee-base-no-art");
 const art = document.querySelector("#latte-art");
+const panelContent = document.querySelector(".panel-five .panel-content");
+const panelText = document.querySelector(".panel-five-text");
 
-
-if (noArt && art) {
+if (noArt && art && milkCan && panelContent && panelText) {
   gsap.set([noArt, art], { scale: 0, transformOrigin: "50% 50%" });
   gsap.set(noArt, { opacity: 1 });
+  gsap.set(milkCan, { x: -700 });
+  gsap.set(panelText, { width: "0%", opacity: 0, overflow: "hidden" });
+  gsap.set(panelContent, { width: "100%" });
 
-  gsap
-    .timeline({
-      scrollTrigger: {
-        trigger: ".panel-five",
-        start: "top top",
-        end: "+=1500",
-        scrub: 1,
-        pin: true,
-        anticipatePin: 1,
-      },
-    })
-    .to([noArt, art], {
-      scale: 1,
-      ease: "sine.inOut",
-      duration: 1,
-    }, 0)
-    .to(noArt, {
-      opacity: 0.12,
-      ease: "power1.in",
-      duration: 0.85,
-    }, 0.25)
+  const tl = gsap.timeline({
+    scrollTrigger: {
+      trigger: ".panel-five",
+      start: "top top",
+      end: "+=2500",
+      scrub: 1,
+      pin: true,
+      anticipatePin: 1,
+    },
+  });
+
+  tl.add("enter")
+    .add("fill", 1)
+    .add("exit", 3);
+
+  tl.to(milkCan, {
+    x: 0,
+    duration: 1,
+    ease: "power2.out",
+  }, "enter");
+
+  tl.to([noArt, art], {
+    scale: 1,
+    duration: 2,
+    ease: "sine.inOut",
+  }, "fill");
+
+  tl.to(noArt, {
+    opacity: 0.12,
+    duration: 1.5,
+    ease: "power1.in",
+  }, "fill+=0.5");
+
+  tl.to(milkCan, {
+    x: -700,
+    duration: 1,
+    ease: "power2.in",
+  }, "exit");
+
+  tl.to(panelContent, {
+    width: "50%",
+    duration: 1,
+    ease: "power1.inOut",
+  }, "exit");
+
+  tl.to(panelText, {
+    width: "50%",
+    opacity: 1,
+    overflow: "visible",
+    duration: 1,
+    ease: "power1.inOut",
+  }, "exit");
 }

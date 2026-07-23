@@ -14,15 +14,21 @@
   margin: 25px;
 }
 
+.panel-five .panel-body {
+  display: flex;
+}
+
 .panel-five .panel-content {
-  width: 50%;
+  width: 100%;
   position: relative;
   perspective: 1600px;
   perspective-origin: 50% 42%;
 }
 
 .panel-five-text {
-  width: 50%;
+  width: 0;
+  opacity: 0;
+  overflow: hidden;
   display: flex;
   flex-direction: column;
   align-items: center;
