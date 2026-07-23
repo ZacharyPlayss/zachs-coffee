@@ -7,35 +7,16 @@
   padding-left: 12vw;
 }
 
-.panel-frame {
+.panel-five .panel-frame {
   width: 100%;
   height: 60vh;
   max-width: 65vw;
   margin: 25px;
-  border: 10px solid #111;
-  border-radius: 24px;
-  box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.2);
-  overflow: hidden;
-  --w-color-primary-70: #fff;
 }
 
-.panel-body {
-  display: flex;
-  width: 100%;
-  height: 100%;
-  padding: 0;
-}
-
-.panel-content {
-  position: relative;
+.panel-five .panel-content {
   width: 50%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #1e1e1d;
-  font-size: 1.5rem;
-  font-weight: bold;
+  position: relative;
   perspective: 1600px;
   perspective-origin: 50% 42%;
 }
