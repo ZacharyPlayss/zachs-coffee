@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
 :root {
   color-scheme: dark;
 }
@@ -7,7 +9,25 @@ body {
   margin: 0;
   background: #0e0f12;
   color: #f4f4f5;
-  font-family: ui-sans-serif, system-ui, sans-serif;
+  font-family: 'Roboto', ui-sans-serif, system-ui, sans-serif;
+}
+
+*,
+body,
+button,
+h1, h2, h3, h4, h5, h6,
+strong, b,
+a,
+code, pre,
+p, ul, ol, li,
+figcaption,
+table, thead, tfoot, th, td {
+  font-family: 'Roboto', sans-serif !important;
+}
+
+h1, h2, h3, h4, h5, h6,
+strong, b {
+  font-weight: bold;
 }
 
 .panel {
@@ -28,7 +48,6 @@ body {
   background: #15161a;
 }
 
-/* ── shared card styles (overrides WebcoreUI Card defaults) ── */
 .panel-frame {
   border: 10px solid #111 !important;
   border-radius: 24px !important;
