@@ -13,7 +13,6 @@
   border: 0px solid #111;
   border-radius: 0;
   box-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
-  overflow: hidden;
 }
 
 .scene {
@@ -28,6 +27,8 @@
   width: 100%;
   height: auto;
   display: block;
+  transform: scale(1.25) translateY(2%);
+  transform-origin: center bottom;
 }
 
 .hero-copy {
