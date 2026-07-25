@@ -83,3 +83,16 @@ strong, b {
   height: 100%;
   object-fit: cover;
 }
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+  .panel-frame {
+    border-width: 6px !important;
+    border-radius: 16px !important;
+    --w-md-radius: 16px;
+  }
+
+  .panel-content {
+    font-size: 1.1rem;
+  }
+}

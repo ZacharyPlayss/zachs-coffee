@@ -14,3 +14,25 @@
   max-height: 800px;
   margin: 25px;
 }
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+  .panel-four {
+    flex-direction: column;
+    padding: 4vh 5vw;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .panel-four .panel-frame {
+    max-width: 100%;
+    width: 100%;
+    max-height: 40vh;
+    height: 40vh;
+    margin: 5px 0;
+  }
+
+  .panel-four .panel-frame:last-child {
+    margin-top: -16vh;
+  }
+}

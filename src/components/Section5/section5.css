@@ -36,3 +36,34 @@
   font-weight:bold;
   color:black;
 }
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+  .panel-five {
+    flex-direction: column;
+    padding: 4vh 5vw;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .panel-five .panel-frame {
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+    min-height: 50vh;
+    margin: 10px 0;
+  }
+
+  .panel-five .panel-body {
+    flex-direction: column;
+  }
+
+  .panel-five .panel-content {
+    width: 100% !important;
+  }
+
+  .panel-five-text {
+    width: 100% !important;
+    padding: 1rem 0;
+  }
+}
