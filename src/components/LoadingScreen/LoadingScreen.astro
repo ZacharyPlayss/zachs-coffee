@@ -11,7 +11,10 @@ import LoadingScene from '../animated-scenes/LoadingScene/LoadingScene.astro';
   function dismissLoadingScreen() {
     const el = document.querySelector('[data-loading-screen]');
     if (el) el.classList.add('is-hidden');
-    setTimeout(() => el?.remove(), 350);
+    setTimeout(() => {
+      el?.remove();
+      document.body.style.background = '#0e0f12';
+    }, 350);
   }
 
   if (document.readyState === 'complete') {
