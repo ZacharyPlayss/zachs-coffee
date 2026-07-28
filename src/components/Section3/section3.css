@@ -59,3 +59,15 @@
     margin: 10px 0;
   }
 }
+.panel-three .panel-frame {
+  padding: 0;
+  overflow: hidden;
+  background: transparent;
+}
+
+.panel-three .panel-body {
+  padding: 0;
+  margin: 0;
+  background: #efdbbb;
+  overflow: hidden;
+}

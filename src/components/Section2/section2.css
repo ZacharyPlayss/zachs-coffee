@@ -108,3 +108,16 @@
     font-size: 1rem;
   }
 }
+
+.panel-two .panel-frame {
+  padding: 0;
+  overflow: hidden;
+  background: #efdbbb;
+}
+
+.panel-two .panel-body {
+  padding: 0;
+  margin: 0;
+  background: transparent;
+  overflow: hidden;
+}
