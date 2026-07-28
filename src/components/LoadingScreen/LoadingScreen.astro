@@ -1,0 +1,26 @@
+---
+import LoadingScene from '../animated-scenes/LoadingScene/LoadingScene.astro';
+---
+<div class="loading-screen" data-loading-screen>
+  <div class="loading-scene">
+    <LoadingScene />
+  </div>
+</div>
+
+<script>
+  function dismissLoadingScreen() {
+    const el = document.querySelector('[data-loading-screen]');
+    if (el) el.classList.add('is-hidden');
+    setTimeout(() => el?.remove(), 350);
+  }
+
+  if (document.readyState === 'complete') {
+    dismissLoadingScreen();
+  } else {
+    window.addEventListener('load', dismissLoadingScreen);
+  }
+</script>
+
+<style>
+  @import './LoadingScreen.css';
+</style>
