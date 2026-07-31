@@ -6,7 +6,7 @@ import { defineConfig } from 'astro/config';
 export default defineConfig({
   base:'/app',
   build: {
-    assetsPrefix: process.env.ASSETS_PREFIX,
+    assetsPrefix: '/app',
   },
   integrations: [webcore()]
 });
