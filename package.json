@@ -27,6 +27,7 @@
     "@types/three": "^0.185.0",
     "sass": "1.100.0",
     "typescript": "5.9.3",
-    "webcoreui": "^1.5.0"
+    "webcoreui": "^1.5.0",
+    "wrangler": "^4.117.0"
   }
 }
